@@ -11,7 +11,7 @@
 *.sln.docstates
 *.sln.DotSettings
 *.sln.DotSettings.user
-
+Windows Applications.sln.DotSettings.user
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
