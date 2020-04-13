@@ -13,8 +13,8 @@
     <ProjectGuid>{173F6BA1-079D-4806-9081-E989288E077B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Applications</RootNamespace>
-    <AssemblyName>Applications</AssemblyName>
+    <RootNamespace>WindowsApplications</RootNamespace>
+    <AssemblyName>WindowsApplications</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <UseCodebase>true</UseCodebase>
@@ -99,9 +99,15 @@
     <Content Include="Commands\Resources\ResourceMonitor.png" />
     <Content Include="Commands\Resources\ScreenKeyboard.png" />
     <Content Include="Commands\Resources\SnippingTool.png" />
-    <Content Include="Commands\Resources\Applications.png" />
     <Content Include="Commands\Resources\SystemInformation.png" />
     <Content Include="Commands\Resources\TaskManager.png" />
+    <Content Include="favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

@@ -47,19 +47,19 @@ namespace Applications
             // When initialized asynchronously, the current thread may be a background thread at this point.
             // Do any initialization that requires the UI thread after switching to the UI thread.
             await JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
-            await Commands.Calculator.InitializeAsync(this);
-            await Commands.CharacterMap.InitializeAsync(this);
-            await Commands.CommandPrompt.InitializeAsync(this);
-            await Commands.ControlPanel.InitializeAsync(this);
-            await Commands.MicrosoftPaint.InitializeAsync(this);
             await Commands.Notepad.InitializeAsync(this);
-            await Commands.RegistryEditor.InitializeAsync(this);
-            await Commands.ResourceMonitor.InitializeAsync(this);
+            await Commands.Calculator.InitializeAsync(this);
             await Commands.ScreenKeyboard.InitializeAsync(this);
             await Commands.SnippingTool.InitializeAsync(this);
+            await Commands.MicrosoftPaint.InitializeAsync(this);
+            await Commands.CharacterMap.InitializeAsync(this);
             await Commands.TaskManager.InitializeAsync(this);
-            await Commands.SystemInformation.InitializeAsync(this);
+            await Commands.CommandPrompt.InitializeAsync(this);
             await Commands.AdminCommandPrompt.InitializeAsync(this);
+            await Commands.RegistryEditor.InitializeAsync(this);
+            await Commands.ControlPanel.InitializeAsync(this);
+            await Commands.ResourceMonitor.InitializeAsync(this);
+            await Commands.SystemInformation.InitializeAsync(this);
         }
 
         #endregion

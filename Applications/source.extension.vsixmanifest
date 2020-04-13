@@ -4,7 +4,7 @@
         <Identity Id="Applications.3a748290-ff5c-4df1-81a0-a10fac39582c" Version="1.0" Language="en-US" Publisher="Cyril Douglas" />
         <DisplayName>WindowsApplications</DisplayName>
         <Description xml:space="preserve">Visual Studio extension that contains built-in windows applications used by developers.</Description>
-        <Icon>Commands\Resources\Applications.png</Icon>
+        <Icon>favicon.ico</Icon>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
