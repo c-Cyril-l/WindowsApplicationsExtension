@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Design;
+using Applications.Misc;
 using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
 
@@ -66,7 +67,7 @@ namespace Applications.Commands
         /// <param name="e">Event args.</param>
         private void Execute(object sender, EventArgs e)
         {
-
+            Launcher.Launch(ApplicationPath.CommandPrompt);
         }
     }
 }

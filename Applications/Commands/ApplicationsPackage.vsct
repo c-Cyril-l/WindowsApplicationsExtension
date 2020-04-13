@@ -35,6 +35,17 @@
          other menus or buttons (commands); from a visual point of view you can see the
          group as the part of a menu contained between two lines. The parent of a group
          must be a menu. -->
+    <Menus>
+      <Menu guid="guidApplicationsPackageCmdSet" id="TopMenu" type="Menu" priority="0x0100">
+        <Parent guid="guidSHLMainMenu"
+        id="IDG_VS_MM_TOOLSADDINS" />
+        <Strings>
+          <ButtonText>Windows Applications</ButtonText>
+          <CommandName>Windows Applications</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+    
     <Groups>
       <Group guid="guidApplicationsPackageCmdSet" id="MiscApps" priority="0x0600">
         <Parent guid="guidApplicationsPackageCmdSet" id="TopMenu" />
@@ -44,14 +55,6 @@
       </Group>
     </Groups>
 
-<Menus>
-  <Menu guid="guidApplicationsPackageCmdSet" id="TopMenu" type="Menu" priority="0x0800">
-<Strings>
-  <ButtonText>Windows Aplications</ButtonText>
-  <CommandName>Windows Aplications</CommandName>
-</Strings>
-  </Menu>
-</Menus>
 
     <!--Buttons section. -->
     <!--This section defines the elements the user can interact with, like a menu command or a button
@@ -64,41 +67,6 @@
               <CommandFlag>DefaultInvisible</CommandFlag>
               <CommandFlag>DynamicVisibility</CommandFlag>
           If you do not want an image next to your command, remove the Icon node /> -->
-      <Button guid="guidApplicationsPackageCmdSet" id="CalculatorId" priority="0x0100" type="Button">
-        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
-        <Icon guid="guidImages" id="bmpPic1" />
-        <Strings>
-          <ButtonText>Calculator</ButtonText>
-        </Strings>
-      </Button>
-      <Button guid="guidApplicationsPackageCmdSet" id="cmdidCharacterMap" priority="0x0100" type="Button">
-        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
-        <Icon guid="guidImages1" id="bmpPic1" />
-        <Strings>
-          <ButtonText>CharacterMap</ButtonText>
-        </Strings>
-      </Button>
-      <Button guid="guidApplicationsPackageCmdSet" id="cmdidCommandPrompt" priority="0x0100" type="Button">
-        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
-        <Icon guid="guidImages2" id="bmpPic1" />
-        <Strings>
-          <ButtonText>CommandPrompt</ButtonText>
-        </Strings>
-      </Button>
-      <Button guid="guidApplicationsPackageCmdSet" id="cmdidControlPanel" priority="0x0100" type="Button">
-        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
-        <Icon guid="guidImages3" id="bmpPic1" />
-        <Strings>
-          <ButtonText>ControlPanel</ButtonText>
-        </Strings>
-      </Button>
-      <Button guid="guidApplicationsPackageCmdSet" id="cmdidMicrosoftPaint" priority="0x0100" type="Button">
-        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
-        <Icon guid="guidImages4" id="bmpPic1" />
-        <Strings>
-          <ButtonText>MicrosoftPaint</ButtonText>
-        </Strings>
-      </Button>
       <Button guid="guidApplicationsPackageCmdSet" id="cmdidNotepad" priority="0x0100" type="Button">
         <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
         <Icon guid="guidImages5" id="bmpPic1" />
@@ -106,53 +74,88 @@
           <ButtonText>Notepad</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidApplicationsPackageCmdSet" id="cmdidRegistryEditor" priority="0x0100" type="Button">
-        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
-        <Icon guid="guidImages6" id="bmpPic1" />
+      <Button guid="guidApplicationsPackageCmdSet" id="CalculatorId" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
+        <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>RegistryEditor</ButtonText>
-        </Strings>
-      </Button>
-      <Button guid="guidApplicationsPackageCmdSet" id="cmdidResourceMonitor" priority="0x0100" type="Button">
-        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
-        <Icon guid="guidImages7" id="bmpPic1" />
-        <Strings>
-          <ButtonText>ResourceMonitor</ButtonText>
+          <ButtonText>Calculator</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidApplicationsPackageCmdSet" id="cmdidScreenKeyboard" priority="0x0100" type="Button">
         <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
         <Icon guid="guidImages8" id="bmpPic1" />
         <Strings>
-          <ButtonText>ScreenKeyboard</ButtonText>
+          <ButtonText>Screen Keyboard</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidApplicationsPackageCmdSet" id="cmdidSnippingTool" priority="0x0100" type="Button">
         <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
         <Icon guid="guidImages9" id="bmpPic1" />
         <Strings>
-          <ButtonText>SnippingTool</ButtonText>
+          <ButtonText>Snipping Tool</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidMicrosoftPaint" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
+        <Icon guid="guidImages4" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Microsoft Paint</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidCharacterMap" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
+        <Icon guid="guidImages1" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Character Map</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidApplicationsPackageCmdSet" id="cmdidTaskManager" priority="0x0100" type="Button">
         <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
         <Icon guid="guidImages10" id="bmpPic1" />
         <Strings>
-          <ButtonText>TaskManager</ButtonText>
+          <ButtonText>Task Manager</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidApplicationsPackageCmdSet" id="cmdidSystemInformation" priority="0x0100" type="Button">
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidCommandPrompt" priority="0x0100" type="Button">
         <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
-        <Icon guid="guidImages11" id="bmpPic1" />
+        <Icon guid="guidImages2" id="bmpPic1" />
         <Strings>
-          <ButtonText>SystemInformation</ButtonText>
+          <ButtonText>Command Prompt</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidApplicationsPackageCmdSet" id="cmdidAdminCommandPrompt" priority="0x0100" type="Button">
         <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
         <Icon guid="guidImages12" id="bmpPic1" />
         <Strings>
-          <ButtonText>AdminCommandPrompt</ButtonText>
+          <ButtonText>Command Prompt (Administrator)</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidRegistryEditor" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
+        <Icon guid="guidImages6" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Registry Editor</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidControlPanel" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
+        <Icon guid="guidImages3" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Control Panel</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidResourceMonitor" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
+        <Icon guid="guidImages7" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Resource Monitor</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidSystemInformation" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
+        <Icon guid="guidImages11" id="bmpPic1" />
+        <Strings>
+          <ButtonText>System Information</ButtonText>
         </Strings>
       </Button>
     </Buttons>
@@ -186,11 +189,11 @@
 
     <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidApplicationsPackageCmdSet" value="{f6bfecd1-7568-4d47-9895-d8f08268d341}">
-      <IDSymbol name="TopMenu" value="0x1060" />
+      <IDSymbol name="TopMenu" value="0x1021"/>
       <IDSymbol name="MiscApps" value="0x1020" />
       <IDSymbol name="SystemApps" value="0x1070" />
       <IDSymbol name="CalculatorId" value="0x0100" />
-      <IDSymbol value="4129" name="cmdidCharacterMap" />
+      <IDSymbol value="4141" name="cmdidCharacterMap" />
       <IDSymbol value="4130" name="cmdidCommandPrompt" />
       <IDSymbol value="4131" name="cmdidControlPanel" />
       <IDSymbol value="4132" name="cmdidMicrosoftPaint" />

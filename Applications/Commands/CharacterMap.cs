@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Design;
+using Applications.Misc;
 using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
 
@@ -13,7 +14,7 @@ namespace Applications.Commands
         /// <summary>
         /// Command ID.
         /// </summary>
-        public const int CommandId = 4129;
+        public const int CommandId = 4141;
 
         /// <summary>
         /// Command menu group (command set GUID).
@@ -67,7 +68,7 @@ namespace Applications.Commands
         /// <param name="e">Event args.</param>
         private void Execute(object sender, EventArgs e)
         {
-
+            Launcher.Launch(ApplicationPath.CharacterMap);
         }
     }
 }

@@ -4,7 +4,6 @@
         <Identity Id="Applications.3a748290-ff5c-4df1-81a0-a10fac39582c" Version="1.0" Language="en-US" Publisher="Cyril Douglas" />
         <DisplayName>WindowsApplications</DisplayName>
         <Description xml:space="preserve">Visual Studio extension that contains built-in windows applications used by developers.</Description>
-        <License>https://github.com/c-Cyril-l/WindowsApplicationsExtension/blob/master/LICENSE</License>
         <Icon>Commands\Resources\Applications.png</Icon>
     </Metadata>
     <Installation>
