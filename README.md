@@ -21,3 +21,9 @@ _By using this extension developers can open common application inside visual st
 - System Information
 - Task Manager
 - Control Panel
+
+### Download
+
+- ### <a href="https://github.com/c-Cyril-l/WindowsApplicationsExtension/releases">From Release</a>
+
+- ### <a href="https://marketplace.visualstudio.com/items?itemName=Cyril-Douglas007.WindowsApplications">Visual Studio Marketplace</a>
