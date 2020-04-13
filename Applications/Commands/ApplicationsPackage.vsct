@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!--  This is the file that defines the actual layout and type of the commands.
+        It is divided in different sections (e.g. command definition, command
+        placement, ...), with each defining a specific set of properties.
+        See the comment before each section for more details about how to
+        use it. -->
+
+  <!--  The VSCT compiler (the tool that translates this file into the binary
+        format that VisualStudio will consume) has the ability to run a preprocessor
+        on the vsct file; this preprocessor is (usually) the C++ preprocessor, so
+        it is possible to define includes and macros with the same syntax used
+        in C++ files. Using this ability of the compiler here, we include some files
+        defining some of the constants that we will use inside the file. -->
+
+  <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+  <Extern href="stdidcmd.h" />
+
+  <!--This header contains the command ids for the menus provided by the shell. -->
+  <Extern href="vsshlids.h" />
+
+  <!--The Commands section is where commands, menus, and menu groups are defined.
+      This section uses a Guid to identify the package that provides the command defined inside it. -->
+  <Commands package="guidApplicationsPackage">
+    <!-- Inside this section we have different sub-sections: one for the menus, another
+    for the menu groups, one for the buttons (the actual commands), one for the combos
+    and the last one for the bitmaps used. Each element is identified by a command id that
+    is a unique pair of guid and numeric identifier; the guid part of the identifier is usually
+    called "command set" and is used to group different command inside a logically related
+    group; your package should define its own command set in order to avoid collisions
+    with command ids defined by other packages. -->
+
+    <!-- In this section you can define new menu groups. A menu group is a container for
+         other menus or buttons (commands); from a visual point of view you can see the
+         group as the part of a menu contained between two lines. The parent of a group
+         must be a menu. -->
+    <Groups>
+      <Group guid="guidApplicationsPackageCmdSet" id="MiscApps" priority="0x0600">
+        <Parent guid="guidApplicationsPackageCmdSet" id="TopMenu" />
+      </Group>
+      <Group guid="guidApplicationsPackageCmdSet" id="SystemApps" priority="0x0800">
+        <Parent guid="guidApplicationsPackageCmdSet" id="TopMenu" />
+      </Group>
+    </Groups>
+
+<Menus>
+  <Menu guid="guidApplicationsPackageCmdSet" id="TopMenu" type="Menu" priority="0x0800">
+<Strings>
+  <ButtonText>Windows Aplications</ButtonText>
+  <CommandName>Windows Aplications</CommandName>
+</Strings>
+  </Menu>
+</Menus>
+
+    <!--Buttons section. -->
+    <!--This section defines the elements the user can interact with, like a menu command or a button
+        or combo box in a toolbar. -->
+    <Buttons>
+      <!--To define a menu group you have to specify its ID, the parent menu and its display priority.
+          The command is visible and enabled by default. If you need to change the visibility, status, etc, you can use
+          the CommandFlag node.
+          You can add more than one CommandFlag node e.g.:
+              <CommandFlag>DefaultInvisible</CommandFlag>
+              <CommandFlag>DynamicVisibility</CommandFlag>
+          If you do not want an image next to your command, remove the Icon node /> -->
+      <Button guid="guidApplicationsPackageCmdSet" id="CalculatorId" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Calculator</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidCharacterMap" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
+        <Icon guid="guidImages1" id="bmpPic1" />
+        <Strings>
+          <ButtonText>CharacterMap</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidCommandPrompt" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
+        <Icon guid="guidImages2" id="bmpPic1" />
+        <Strings>
+          <ButtonText>CommandPrompt</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidControlPanel" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
+        <Icon guid="guidImages3" id="bmpPic1" />
+        <Strings>
+          <ButtonText>ControlPanel</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidMicrosoftPaint" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
+        <Icon guid="guidImages4" id="bmpPic1" />
+        <Strings>
+          <ButtonText>MicrosoftPaint</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidNotepad" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
+        <Icon guid="guidImages5" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Notepad</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidRegistryEditor" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
+        <Icon guid="guidImages6" id="bmpPic1" />
+        <Strings>
+          <ButtonText>RegistryEditor</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidResourceMonitor" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
+        <Icon guid="guidImages7" id="bmpPic1" />
+        <Strings>
+          <ButtonText>ResourceMonitor</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidScreenKeyboard" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
+        <Icon guid="guidImages8" id="bmpPic1" />
+        <Strings>
+          <ButtonText>ScreenKeyboard</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidSnippingTool" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="MiscApps" />
+        <Icon guid="guidImages9" id="bmpPic1" />
+        <Strings>
+          <ButtonText>SnippingTool</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidTaskManager" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
+        <Icon guid="guidImages10" id="bmpPic1" />
+        <Strings>
+          <ButtonText>TaskManager</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidSystemInformation" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
+        <Icon guid="guidImages11" id="bmpPic1" />
+        <Strings>
+          <ButtonText>SystemInformation</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidApplicationsPackageCmdSet" id="cmdidAdminCommandPrompt" priority="0x0100" type="Button">
+        <Parent guid="guidApplicationsPackageCmdSet" id="SystemApps" />
+        <Icon guid="guidImages12" id="bmpPic1" />
+        <Strings>
+          <ButtonText>AdminCommandPrompt</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
+    <Bitmaps>
+      <!--  The bitmap id is defined in a way that is a little bit different from the others:
+            the declaration starts with a guid for the bitmap strip, then there is the resource id of the
+            bitmap strip containing the bitmaps and then there are the numeric ids of the elements used
+            inside a button definition. An important aspect of this declaration is that the element id
+            must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
+      <Bitmap guid="guidImages" href="Resources\Calculator.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages1" href="Resources\CharacterMap.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages2" href="Resources\CommandPrompt.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages3" href="Resources\ControlPanel.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages4" href="Resources\MicrosoftPaint.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages5" href="Resources\Notepad.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages6" href="Resources\RegistryEditor.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages7" href="Resources\ResourceMonitor.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages8" href="Resources\ScreenKeyboard.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages9" href="Resources\SnippingTool.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages10" href="Resources\TaskManager.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages11" href="Resources\SystemInformation.png" usedList="bmpPic1" />
+      <Bitmap guid="guidImages12" href="Resources\AdminCommandPrompt.png" usedList="bmpPic1" />
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidApplicationsPackage" value="{e3e553fc-3682-41e9-a5e0-effe5b961859}" />
+
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidApplicationsPackageCmdSet" value="{f6bfecd1-7568-4d47-9895-d8f08268d341}">
+      <IDSymbol name="TopMenu" value="0x1060" />
+      <IDSymbol name="MiscApps" value="0x1020" />
+      <IDSymbol name="SystemApps" value="0x1070" />
+      <IDSymbol name="CalculatorId" value="0x0100" />
+      <IDSymbol value="4129" name="cmdidCharacterMap" />
+      <IDSymbol value="4130" name="cmdidCommandPrompt" />
+      <IDSymbol value="4131" name="cmdidControlPanel" />
+      <IDSymbol value="4132" name="cmdidMicrosoftPaint" />
+      <IDSymbol value="4133" name="cmdidNotepad" />
+      <IDSymbol value="4134" name="cmdidRegistryEditor" />
+      <IDSymbol value="4135" name="cmdidResourceMonitor" />
+      <IDSymbol value="4136" name="cmdidScreenKeyboard" />
+      <IDSymbol value="4137" name="cmdidSnippingTool" />
+      <IDSymbol value="4138" name="cmdidTaskManager" />
+      <IDSymbol value="4139" name="cmdidSystemInformation" />
+      <IDSymbol value="4140" name="cmdidAdminCommandPrompt" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{f1517de9-954d-4df1-bcc1-1d51b6fbbced}">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{25506b78-ae77-4680-8f26-701fac06e941}" name="guidImages1">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{2cc5baf9-a5a0-4a8d-a594-dc2a158e1eff}" name="guidImages2">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{88b3e0f5-022e-4893-b043-618a7f8daee5}" name="guidImages3">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{9e988910-8899-47ac-8bf8-db22364a1064}" name="guidImages4">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{16551370-d0ae-4344-b404-3368aceb8fcc}" name="guidImages5">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{ed84e714-6530-4d72-816f-bc5d0a28919f}" name="guidImages6">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{12ab72a8-620b-4cc7-92e6-1812560526ce}" name="guidImages7">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{4df67fc0-60f3-46d1-aea5-003bb009f03d}" name="guidImages8">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{d30d4a2c-5fc9-463d-9725-f96078ba458d}" name="guidImages9">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{21ce87f2-ec58-4272-a095-27f999a703ee}" name="guidImages10">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{66707d72-209b-45b4-9403-cd969cbec81c}" name="guidImages11">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  
+    <GuidSymbol value="{4d21994f-48ac-4eaa-9696-6709a9d8349e}" name="guidImages12">
+      <IDSymbol name="bmpPic1" value="1" />
+
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
